@@ -1,0 +1,94 @@
+body {
+    background-color: #f2f2f2;
+}
+
+#content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* 面板div样式 */
+#content .panel {
+    background-color: white;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px 20px 20px 20px;
+}
+
+/* 分组label */
+#content .panel .group {
+    margin-top: 10px;
+}
+
+#content .panel .group label {
+    /* 把label变为块级标签，块级标签独占一行（换行） */
+    display: block;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+/* 输入框标签样式 */
+#content .panel .group input {
+    display: block;
+    width: 250px;
+    height: 33px;
+    padding-left: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+/* 伪类 输入框获取焦点后的样式*/
+#content .panel .group input:focus {
+    outline: none;
+    /*border-color: #cc865e;*/
+    border-left-color: #cc865e;
+    border-left-width: 2px;
+}
+
+/* 登录div标签样式 */
+#content .panel .login {
+    margin-top: 20px;
+}
+
+
+#content button {
+    color: white;
+    height: 33px;
+    border: 0px;
+    font-size: 18px;
+}
+
+/* 登录按钮的样式 */
+#content .panel .login button {
+    background-color: #cc865e;
+    width: 250px;
+}
+
+/* 伪类：鼠标悬浮在登录按钮上时按钮的样式*/
+#content .panel .login button:hover {
+    background-color: white;
+    color: #cc865e;
+    border: 1px solid #cc865e;
+    /*鼠标光标变小手（表示可点击）*/
+    cursor: pointer;
+}
+
+#content .register {
+    margin-top: 20px;
+}
+
+#content .register button {
+    background-color: #466baf;
+    width: 200px;
+}
+
+#content .register button:hover {
+    background-color: white;
+    color: #466baf;
+    border: 1px solid #466baf;
+    /*鼠标光标变小手（表示可点击）*/
+    cursor: pointer;
+}
