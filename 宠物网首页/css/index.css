@@ -1,0 +1,178 @@
+/* 导入外部字体 */
+@font-face {
+    font-family: BebasNeue-webfont;
+    src: url("../fonts/BebasNeue-webfont.ttf");
+}
+
+/* 清空所有的默认边距 */
+/* 方式1 */
+/*a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{*/
+/*margin: 0;*/
+/*padding: 0;*/
+/*}*/
+
+/* 方式2：效率略低 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 背景图片默认平铺（重复铺满）*/
+    background: url("../img/pattern.gif");
+    /* 不平铺（不重复） */
+    /*background: url("../img/pattern.gif") no-repeat;*/
+
+    /* 使用外部字体 */
+    font-family: BebasNeue-webfont;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+#header {
+    background-color: red;
+    height: 3px;
+}
+
+#nav {
+    /*background-color: green;*/
+    /* 内容居中 */
+    text-align: center;
+}
+
+#nav ul li {
+    /* 把li变为行内-块级标签 */
+    display: inline-block;
+}
+
+#nav ul li a {
+    /*background-color: #5385ff;*/
+    /*float: left;*/
+    /* a标签是行内标签，在一行可显示多个标签，其宽度等于内容的大小。要想固定a标签的宽度，应变为行内-块级标签 */
+    display: inline-block;
+    width: 200px;
+
+    color: white;
+    margin: 0px 20px 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+#nav ul li a.selected {
+    background-color: white;
+    color: black;
+}
+
+#list {
+    background-color: white;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+#list .pet {
+    /*background-color: orange;*/
+    width: 360px;
+    display: inline-block;
+    /*居左对齐*/
+    text-align: left;
+    margin: 20px;
+}
+
+#list .pet p {
+    color: #999;
+    font-family: sans-serif;
+    margin: 5px 0px;
+}
+
+#list .pet a {
+    background-color: #c0392b;
+    color: white;
+    display: inline-block;
+    width: 120px;
+    height: 33px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 33px;
+}
+
+#list .pet a:hover {
+    background-color: rgba(44, 82, 153, 0.92);
+}
+
+#footer {
+    /*background-color: red;*/
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#footer label {
+    display: inline-block;
+    /*background-color: yellow;*/
+    color: white;
+    margin: 5px 0px;
+    font-size: 20px;
+}
+
+#footer ul li {
+    display: inline-block;
+    margin: 0px 5px 0px 0px;
+}
+
+#footer ul li:hover {
+    /* 设置不透明度 */
+    opacity: 0.8;
+}
+
+/* 响应式设计：监听屏幕宽度或高度的变化。 */
+/* 当屏幕的宽度或高度达到某个临界值时，就执行下面的东西 */
+@media screen and (max-width: 1210px){
+    /* 改变a标签的宽度和字体大小 */
+    #nav ul li a {
+        width: 160px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1010px){
+    /* 改变a标签的宽度和字体大小 */
+    #nav ul li a {
+        width: 120px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 810px){
+    /* 改变a标签的宽度和字体大小 */
+    #nav ul li a {
+        width: 80px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 610px){
+    /* 改变a标签的宽度和字体大小 */
+    #nav ul li a {
+        width: 50px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    /* 改变a标签的宽度和字体大小 */
+    #nav ul li a {
+        width: 30px;
+        font-size: 10px;
+    }
+}
