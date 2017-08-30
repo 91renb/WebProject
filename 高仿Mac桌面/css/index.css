@@ -1,0 +1,108 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url("../img/apple.jpg");
+    background-size: cover;
+}
+
+#header {
+    background-color: #1a2a3a;
+    box-shadow: 0px 0.5px 3px black;
+    height: 30px;
+    line-height: 30px;
+}
+
+#header .header-left {
+    display: inline-block;
+    /*background-color: #b725ff;*/
+
+}
+
+#header .header-left li {
+    display: inline-block;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    margin: 0px 5px;
+}
+
+#header .header-left li:hover {
+    cursor: pointer;
+}
+
+#header .header-right {
+    float: right;
+    /*background-color: blue;*/
+}
+
+#header .header-right li {
+    display: inline-block;
+    text-align: right;
+    color: white;
+    font-size: 15px;
+    margin: 0px 5px;
+}
+
+#header .header-right li:hover {
+    cursor: pointer;
+}
+
+#content .folder {
+    margin: 30px 20px;
+    width: 60px;
+    text-align: center;
+}
+
+#content .folder img {
+    width: 60px;
+    height: 60px;
+}
+
+#content .folder p {
+    color: white;
+    font-size: 14px;
+}
+
+#footer {
+    width: 100%;
+    height: 70px;
+    /* 脱离标准流，浮动在body的底部 */
+    position: absolute;
+    bottom: 0px;
+    /* footer的内容水平居中 */
+    text-align: center;
+    /* footer的内容垂直居中*/
+    line-height: 60px;
+}
+
+#footer .dock {
+    background: url("../img/dock_bg.png");
+    width: 70%;
+    height: 70px;
+    display: inline-block;
+    border-radius: 5px 5px 0px 0px;
+    opacity: 0.8;
+}
+
+#footer .dock ul li {
+    display: inline-block;
+    margin: 0px 5px;
+    /* 设置动画过渡的时长和效果（有线性、非线性） */
+    -webkit-transition: 0.2s linear;
+}
+
+#footer .dock ul li a img {
+    width: 50px;
+    height: 50px;
+}
+
+/* 过渡形变动画 */
+#footer .dock ul li:hover {
+    /* 参照点（以坐标点的位置为参照点来进行形变：底部中心） */
+    -webkit-transform-origin: bottom center;
+    /* 设置形变（如：移动、放大、缩小等） */
+    -webkit-transform: scale(1.6);
+}
